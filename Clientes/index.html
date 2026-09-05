@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Clientes - Sistema de Pedidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="mb-4 text-center fw-bold">Clientes</h1>
+
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-whitefw-bold">
+                        <h5 class="card-title mb-0">Registrar Nuevo Cliente</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+                                <select class="form-select" id="tipoDocumento" required>
+                                    <option value="DNI" selected>DNI</option>
+                                    <option value="RUC">RUC</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="numDocumento" class="form-label">Número de Documento</label>
+                                <input type="text" class="form-control" id="numDocumento" placeholder="Ej. 74839201"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombreCliente" class="form-label">Nombre / Razón Social</label>
+                                <input type="text" class="form-control" id="nombreCliente"
+                                    placeholder="Ej. Alessandra Valencia" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailCliente" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="emailCliente"
+                                    placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccionCliente" class="form-label">Dirección de Entrega</label>
+                                <input type="text" class="form-control" id="direccionCliente"
+                                    placeholder="Av. Larco 123, Trujillo" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 fw-bold">Guardar Cliente</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white fw-bold">
+                        <h5 class="card-title mb-0">Clientes Registrados</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Doc.</th>
+                                        <th>Nombre / Razón Social</th>
+                                        <th>Correo</th>
+                                        <th>Dirección</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaCuerpo">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
