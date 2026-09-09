@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes - Pedidos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-neutral-900 border-b border-neutral-800 py-4 px-6 shadow-md">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wider text-orange-500">PROYECTO <span class="text-white">PEDIDOS</span></h1>
+            <span class="text-xs bg-orange-500/10 text-orange-400 border border-orange-500/30 px-3 py-1 rounded-full font-medium">Módulo Clientes</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto w-full p-6 my-auto">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 shadow-xl">
+            <h2 class="text-lg font-semibold mb-4 text-orange-400 border-b border-neutral-800 pb-2">Registrar Nuevo Cliente</h2>
+            
+            <!-- Formulario básico -->
+            <form id="formCliente" class="space-y-4 mb-8">
+                <div>
+                    <label class="block text-sm font-medium text-neutral-400 mb-1">Nombre del Cliente</label>
+                    <input type="text" id="nombreCliente" required class="w-full bg-black border border-neutral-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-orange-500 transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-neutral-400 mb-1">Correo Electrónico</label>
+                    <input type="email" id="emailCliente" required class="w-full bg-black border border-neutral-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-orange-500 transition">
+                </div>
+                <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 cursor-pointer">
+                    Guardar Cliente
+                </button>
+            </form>
+
+            <!-- Listado -->
+            <h2 class="text-lg font-semibold mb-4 text-orange-400 border-b border-neutral-800 pb-2">Lista de Clientes</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-neutral-800 text-neutral-400 text-sm">
+                            <th class="py-2 px-3">Nombre</th>
+                            <th class="py-2 px-3">Correo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaClientes" class="divide-y divide-neutral-800 text-sm">
+                        <!-- Los clientes se listarán aquí dinámicamente con JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-xs text-neutral-500 border-t border-neutral-900">
+        Sistema de Control de Versiones - Equipo 04
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
