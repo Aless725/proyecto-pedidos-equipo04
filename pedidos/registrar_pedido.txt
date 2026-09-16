@@ -1,0 +1,18 @@
+MÓDULO DE PEDIDOS - REGISTRAR PEDIDO
+------------------------------------
+Funcionalidad: Registrar un nuevo pedido del cliente
+
+Datos que se solicitan:
+- ID del pedido
+- Fecha
+- Cliente
+- Producto
+- Cantidad
+- Total
+
+Proceso:
+1. El usuario ingresa los datos del pedido
+2. El sistema valida que el cliente exista
+3. El sistema valida que el producto exista
+4. Se guarda el pedido en la base de datos
+5. Se muestra mensaje de confirmación
