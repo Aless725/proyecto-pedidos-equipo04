@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Pedidos - Hamburguesería</title>
+    <link rel="stylesheet" href="https://jsdelivr.net">
+</head>
+
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="mb-4 text-center fw-bold text-dark"> Sistema de Pedidos - Hamburguesas</h1>
+
+        <div class="row g-4">
+
+            <div class="col-md-5">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-dark text-white fw-bold">
+                        <h5 class="card-title mb-0" id="formTitle">Tomar Nuevo Pedido</h5>
+                    </div>
+                    
+                    <div class="card-body">
+                        <form id="formPedido">
+
+                            <div class="mb-3">
+                                <label for="nombreCliente" class="form-label fw-semibold">Nombre del Cliente</label>
+                                <input type="text" class="form-control" id="nombreCliente" placeholder="Ej. David Torres" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="selectProducto" class="form-label fw-semibold">Seleccionar Hamburguesa</label>
+                                <select class="form-select" id="selectProducto" required>
+                                    <option value="" disabled selected>-- Elige una hamburguesa --</option>
+                                    <option value="Clásica" data-precio="4.00">Clásica (S/. 4.00)</option>
+                                    <option value="Deshilachado de Pollo" data-precio="5.00">Deshilachado de Pollo (S/. 5.00)</option>
+                                    <option value="Chesse Burger" data-precio="5.00">Chesse Burger (S/. 5.00)</option>
+                                    <option value="Con Huevo" data-precio="5.00">Con Huevo (S/. 5.00)</option>
+                                    <option value="Con Chorizo" data-precio="5.00">Con Chorizo (S/. 5.00)</option>
+                                    <option value="Royal" data-precio="6.00">Royal (S/. 6.00)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="precioProducto" class="form-label fw-semibold">Precio Automático (S/.)</label>
+                                <input type="number" class="form-control bg-body-secondary" id="precioProducto" readonly required placeholder="0.00">
+                            </div>
+                            
+                            <button type="submit" id="buttonSave" class="btn btn-success w-100 fw-bold py-2">Guardar Pedido</button>
+                            <button type="button" id="buttonCancel" class="btn btn-secondary w-100 fw-bold mt-2 d-none">Cancelar Edición</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">Pedidos en Cola</h5>
+                        <input type="text" id="inputBuscar" class="form-control form-control-sm w-50" placeholder="Buscar por cliente o hamburguesa...">
+                    </div>
+                    
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <th>Hamburguesa</th>
+                                        <th>Total a Pagar</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="pedidos.js"></script>
+    <script src="https://jsdelivr.net"></script>
+</body>
+
+</html>
