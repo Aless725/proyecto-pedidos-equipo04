@@ -7,18 +7,6 @@ Repositorio estructurado para el control y gestion modular de clientes, pedidos 
 El proyecto se encuentra organizado en las siguientes carpetas y archivos dentro del directorio fuente:
 
 
-src/
-├── clientes/
-│   ├── index.html
-│   └── script.js
-├── pedidos/
-│   ├── pedidos.html
-│   ├── pedidos.js
-│   └── pedidos.py
-└── Productos/
-    ├── index.html
-    └── style.css
-    
 Modulos del Sistema
 Clientes: Contiene la interfaz web y la logica en JavaScript para la administracion de los clientes.
 
